@@ -4,6 +4,14 @@
     <img alt="Excalidraw" src="https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github/excalidraw_github_cover_2.png" />
   </picture>
 </a>
+<h1 align="center">For devs:</h1>
+How to create new feature?
+
+1. Create new branch - checkout from v0.17.3
+2. Commit your changes
+3. Build the excalidraw package -> go to excalidraw package and run `yarn build:umd`
+4. Push the changes with the dist directory - make sure its removed from .gitignore
+5. Reinstall packages in your monorepo
 
 <h4 align="center">
   <a href="https://excalidraw.com">Excalidraw Editor</a> |

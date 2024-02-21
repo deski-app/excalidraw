@@ -12,8 +12,7 @@
   "main": "main.js",
   "types": "packages/excalidraw/dist/excalidraw/index.d.ts",
   "files": [
-    "packages/excalidraw/dist/excalidraw/*",
-    "packages/excalidraw/dist/excalidraw/types/*"
+    "packages/excalidraw/dist/*"
   ],
   "peerDependencies": {
     "react": "^17.0.2 || ^18.2.0",

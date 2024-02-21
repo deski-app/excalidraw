@@ -8,7 +8,7 @@
     "examples/excalidraw",
     "examples/excalidraw/*"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./packages/excalidraw/dist/prod/index.js",
   "types": "./packages/excalidraw/dist/excalidraw/index.d.ts",
   "files": [

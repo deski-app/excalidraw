@@ -114,8 +114,9 @@ export const SelectedShapeActions = ({
       {(hasStrokeStyle(appState.activeTool.type) ||
         targetElements.some((element) => hasStrokeStyle(element.type))) && (
         <>
-          {renderAction("changeStrokeStyle")}
-          {renderAction("changeSloppiness")}
+          {/* Parkalot: Dont allow to change sloppiness and stroke style */}
+          {/* {renderAction("changeStrokeStyle")} */}
+          {/* {renderAction("changeSloppiness")} */}
         </>
       )}
 
@@ -206,7 +207,7 @@ export const SelectedShapeActions = ({
             {!device.editor.isMobile && renderAction("deleteSelectedElements")}
             {renderAction("group")}
             {renderAction("ungroup")}
-            {showLinkIcon && renderAction("hyperlink")}
+            {/* {showLinkIcon && renderAction("hyperlink")} */}
           </div>
         </fieldset>
       )}

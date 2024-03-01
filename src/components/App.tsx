@@ -210,7 +210,7 @@ import {
 import Scene from "../scene/Scene";
 import { RenderInteractiveSceneCallback, ScrollBars } from "../scene/types";
 import { getStateForZoom } from "../scene/zoom";
-import { findShapeByKey } from "../shapes";
+import { findShapeByKey, isDefaultShape } from "../shapes";
 import {
   AppClassProperties,
   AppProps,
@@ -3183,7 +3183,11 @@ class App extends React.Component<AppProps, AppState> {
               })`,
             );
           }
-          this.setActiveTool({ type: shape });
+          if (isDefaultShape(shape)) {
+            this.setActiveTool({ type: shape });
+          } else {
+            this.setActiveTool({ type: "custom", customType: shape });
+          }
           event.stopPropagation();
         } else if (event.key === KEYS.Q) {
           this.toggleLock("keyboard");

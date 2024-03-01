@@ -3662,6 +3662,9 @@ class App extends React.Component<AppProps, AppState> {
     insertAtParentCenter?: boolean;
     container?: ExcalidrawTextContainer | null;
   }) => {
+    if (this.state.disableTextEditing) {
+      return;
+    }
     let shouldBindToContainer = false;
 
     let parentCenterPosition =

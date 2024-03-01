@@ -428,7 +428,9 @@ declare class App extends React.Component<AppProps, AppState> {
     private handleCanvasContextMenu;
     private maybeDragNewGenericElement;
     private maybeHandleResize;
+    private parkalotSupportedContextMenu;
     private getContextMenuItems;
+    private _getContextMenuItems;
     private handleWheel;
     private getTextWysiwygSnappedToCenterPosition;
     private savePointer;

@@ -126,6 +126,7 @@ export declare const actionToggleElementLock: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
         commitToHistory: true;
     };
@@ -262,6 +263,7 @@ export declare const actionUnlockAllElements: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
         commitToHistory: true;
     };

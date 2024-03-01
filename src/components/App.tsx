@@ -8389,7 +8389,9 @@ class App extends React.Component<AppProps, AppState> {
   ): ContextMenuItems => {
     const items = this._getContextMenuItems(type);
     return items
-      .filter((item) => this.parkalotSupportedContextMenu.has(item))
+      .filter((item) =>
+        this.parkalotSupportedContextMenu.has(item as unknown as string),
+      )
       .reduce((acc, item, index) => {
         if (index > 0 && acc[index - 1] !== item) {
           acc.push(item);

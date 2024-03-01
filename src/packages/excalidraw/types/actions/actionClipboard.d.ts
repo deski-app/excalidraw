@@ -124,6 +124,7 @@ export declare const actionCopy: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
     } | {
         commitToHistory: false;
@@ -260,6 +261,7 @@ export declare const actionPaste: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
     } | {
         commitToHistory: false;
@@ -396,6 +398,7 @@ export declare const actionCut: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     } | {
@@ -547,6 +550,7 @@ export declare const actionCut: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
         commitToHistory: true;
     } | {
@@ -663,6 +667,7 @@ export declare const actionCut: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
         commitToHistory: boolean;
     };
@@ -799,6 +804,7 @@ export declare const actionCopyAsSvg: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     }>;
@@ -935,6 +941,7 @@ export declare const actionCopyAsPng: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     }>;

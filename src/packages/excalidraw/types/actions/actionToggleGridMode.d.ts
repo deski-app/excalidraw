@@ -126,6 +126,7 @@ export declare const actionToggleGridMode: {
                 x: number;
                 y: number;
             } | null;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     };

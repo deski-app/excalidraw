@@ -58,7 +58,7 @@ export const generateRoughOptions = (
         : undefined,
     // for non-solid strokes, disable multiStroke because it tends to make
     // dashes/dots overlay each other
-    disableMultiStroke: element.strokeStyle !== "solid",
+    disableMultiStroke: true, // element.strokeStyle !== "solid",
     // for non-solid strokes, increase the width a bit to make it visually
     // similar to solid strokes, because we're also disabling multiStroke
     strokeWidth:

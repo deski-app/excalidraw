@@ -46,6 +46,7 @@ export declare class LinearElementEditor {
      *  statically guarantee this method returns an ExcalidrawLinearElement)
      */
     static getElement(id: InstanceType<typeof LinearElementEditor>["elementId"]): NonDeleted<ExcalidrawLinearElement> | null;
+    static isEditable(element: NonDeleted<ExcalidrawLinearElement>): boolean;
     static handleBoxSelection(event: PointerEvent, appState: AppState, setState: React.Component<any, AppState>["setState"]): false | undefined;
     /** @returns whether point was dragged */
     static handlePointDragging(event: PointerEvent, appState: AppState, scenePointerX: number, scenePointerY: number, maybeSuggestBinding: (element: NonDeleted<ExcalidrawLinearElement>, pointSceneCoords: {
@@ -136,7 +137,7 @@ export declare class LinearElementEditor {
                 state: "active" | "hover";
             } | null;
             draggingElement: import("./types").NonDeletedExcalidrawElement | null;
-            resizingElement: import("./types").NonDeletedExcalidrawElement | null;
+            resizingElement: import("./types").NonDeletedExcalidrawElement | null; /** @returns whether point was dragged */
             multiElement: NonDeleted<ExcalidrawLinearElement> | null;
             selectionElement: import("./types").NonDeletedExcalidrawElement | null;
             isBindingEnabled: boolean;

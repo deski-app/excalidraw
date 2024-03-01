@@ -248,6 +248,9 @@ const renderLinearPointHandles = (
   appState: InteractiveCanvasAppState,
   element: NonDeleted<ExcalidrawLinearElement>,
 ) => {
+  if (!LinearElementEditor.isEditable(element)) {
+    return;
+  }
   if (!appState.selectedLinearElement) {
     return;
   }

@@ -8388,7 +8388,14 @@ class App extends React.Component<AppProps, AppState> {
     type: "canvas" | "element",
   ): ContextMenuItems => {
     const items = this._getContextMenuItems(type);
-    return items.filter((item) => this.parkalotSupportedContextMenu.has(item));
+    return items
+      .filter((item) => this.parkalotSupportedContextMenu.has(item))
+      .reduce((acc, item, index) => {
+        if (index > 0 && acc[index - 1] !== item) {
+          acc.push(item);
+        }
+        return acc;
+      }, [] as ContextMenuItems);
   };
 
   private _getContextMenuItems = (

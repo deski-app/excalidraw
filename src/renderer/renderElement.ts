@@ -905,6 +905,9 @@ export const renderElementToSvg = (
   }
 
   const addToRoot = (node: SVGElement, element: ExcalidrawElement) => {
+    if (element.customData?.id) {
+      node.setAttribute("data-id", element.customData.id);
+    }
     if (isTestEnv()) {
       node.setAttribute("data-id", element.id);
     }

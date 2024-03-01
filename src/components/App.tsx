@@ -8369,7 +8369,29 @@ class App extends React.Component<AppProps, AppState> {
     return false;
   };
 
+  private parkalotSupportedContextMenu = new Map(
+    Object.entries({
+      CONTEXT_MENU_SEPARATOR,
+      actionPaste,
+      actionCut,
+      actionCopy,
+      actionDeleteSelected,
+      actionDuplicateSelection,
+      actionToggleGridMode,
+      actionToggleObjectsSnapMode,
+      actionGroup,
+      actionUngroup,
+    }),
+  );
+
   private getContextMenuItems = (
+    type: "canvas" | "element",
+  ): ContextMenuItems => {
+    const items = this._getContextMenuItems(type);
+    return items.filter((item) => this.parkalotSupportedContextMenu.has(item));
+  };
+
+  private _getContextMenuItems = (
     type: "canvas" | "element",
   ): ContextMenuItems => {
     const options: ContextMenuItems = [];

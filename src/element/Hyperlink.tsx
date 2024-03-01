@@ -72,6 +72,7 @@ export const Hyperlink = ({
     toast: { message: string; closable?: boolean; duration?: number } | null,
   ) => void;
 }) => {
+  return;
   const appState = useExcalidrawAppState();
   const appProps = useAppProps();
 

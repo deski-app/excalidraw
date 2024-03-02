@@ -8369,31 +8369,28 @@ class App extends React.Component<AppProps, AppState> {
     return false;
   };
 
-  private parkalotSupportedContextMenu = new Map(
-    Object.entries({
-      CONTEXT_MENU_SEPARATOR,
-      actionPaste,
-      actionCut,
-      actionCopy,
-      actionDeleteSelected,
-      actionDuplicateSelection,
-      actionToggleGridMode,
-      actionToggleObjectsSnapMode,
-      actionGroup,
-      actionUngroup,
-    }),
-  );
+  private parkalotSupportedContextMenu = new Set<unknown>([
+    CONTEXT_MENU_SEPARATOR,
+    actionPaste,
+    actionCut,
+    actionCopy,
+    actionDeleteSelected,
+    actionDuplicateSelection,
+    actionToggleGridMode,
+    actionToggleObjectsSnapMode,
+    actionGroup,
+    actionUngroup,
+  ]);
 
   private getContextMenuItems = (
     type: "canvas" | "element",
   ): ContextMenuItems => {
+    console.log("dupa");
     const items = this._getContextMenuItems(type);
     return items
-      .filter((item) =>
-        this.parkalotSupportedContextMenu.has(item as unknown as string),
-      )
+      .filter((item) => this.parkalotSupportedContextMenu.has(item))
       .reduce((acc, item, index) => {
-        if (index > 0 && acc[index - 1] !== item) {
+        if (index === 0 || acc[index - 1] !== item) {
           acc.push(item);
         }
         return acc;

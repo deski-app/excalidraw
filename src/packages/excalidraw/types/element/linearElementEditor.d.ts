@@ -240,6 +240,7 @@ export declare class LinearElementEditor {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
     };
     static deletePoints(element: NonDeleted<ExcalidrawLinearElement>, pointIndices: readonly number[]): void;

@@ -125,6 +125,7 @@ export declare const actionToggleZenMode: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     };

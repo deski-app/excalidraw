@@ -136,6 +136,7 @@ export declare const actionLink: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
         commitToHistory: true;
     };

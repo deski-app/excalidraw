@@ -123,6 +123,7 @@ export declare const actionToggleCanvasMenu: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     };
@@ -255,6 +256,7 @@ export declare const actionToggleEditMenu: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     };
@@ -389,6 +391,7 @@ export declare const actionShortcuts: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     };

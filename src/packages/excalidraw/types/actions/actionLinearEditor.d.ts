@@ -126,6 +126,7 @@ export declare const actionToggleLinearEditor: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     };

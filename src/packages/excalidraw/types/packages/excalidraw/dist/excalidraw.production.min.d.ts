@@ -1,1 +1,2 @@
-export const ExcalidrawLib: {};
+export = __WEBPACK_EXTERNAL_MODULE__5156__;
+export = __WEBPACK_EXTERNAL_MODULE__5156__;

@@ -125,6 +125,7 @@ export declare const actionToggleObjectsSnapMode: {
                 x: number;
                 y: number;
             } | null;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     };

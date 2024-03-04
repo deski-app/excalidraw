@@ -141,6 +141,7 @@ export declare const actionRemoveAllElementsFromFrame: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: true;
     } | {
@@ -280,6 +281,7 @@ export declare const actionupdateFrameRendering: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: false;
     };
@@ -414,6 +416,7 @@ export declare const actionSetFrameAsActiveTool: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: false;
     };

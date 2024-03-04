@@ -124,6 +124,7 @@ export declare const actionToggleStats: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: false;
     };

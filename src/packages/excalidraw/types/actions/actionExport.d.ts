@@ -123,6 +123,7 @@ export declare const actionChangeProjectName: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: false;
     };
@@ -256,6 +257,7 @@ export declare const actionChangeExportScale: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: false;
     };
@@ -389,6 +391,7 @@ export declare const actionChangeExportBackground: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: false;
     };
@@ -522,6 +525,7 @@ export declare const actionChangeExportEmbedScene: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: false;
     };
@@ -654,6 +658,7 @@ export declare const actionSaveToActiveFile: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
     } | {
         commitToHistory: false;
@@ -788,6 +793,7 @@ export declare const actionSaveFileToDisk: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
     } | {
         commitToHistory: false;
@@ -921,6 +927,7 @@ export declare const actionLoadScene: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         files: import("../types").BinaryFiles;
         commitToHistory: true;
@@ -1045,6 +1052,7 @@ export declare const actionLoadScene: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         files: import("../types").BinaryFiles;
         commitToHistory: false;
@@ -1179,6 +1187,7 @@ export declare const actionExportWithDarkMode: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: false;
     };

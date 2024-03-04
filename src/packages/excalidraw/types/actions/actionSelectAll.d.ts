@@ -125,6 +125,7 @@ export declare const actionSelectAll: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: true;
     };

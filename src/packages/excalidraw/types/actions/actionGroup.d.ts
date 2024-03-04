@@ -129,6 +129,7 @@ export declare const actionGroup: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         elements: ExcalidrawElement[];
         commitToHistory: true;
@@ -269,6 +270,7 @@ export declare const actionUngroup: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         elements: ExcalidrawElement[];
         commitToHistory: true;

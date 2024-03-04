@@ -122,6 +122,7 @@ export declare const actionCopyStyles: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: false;
     };

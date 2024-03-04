@@ -124,6 +124,7 @@ export declare const actionFinalize: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: true;
     } | {
@@ -244,6 +245,7 @@ export declare const actionFinalize: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: boolean;
     };

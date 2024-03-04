@@ -137,7 +137,7 @@ export declare class LinearElementEditor {
                 state: "active" | "hover";
             } | null;
             draggingElement: import("./types").NonDeletedExcalidrawElement | null;
-            resizingElement: import("./types").NonDeletedExcalidrawElement | null; /** @returns whether point was dragged */
+            resizingElement: import("./types").NonDeletedExcalidrawElement | null;
             multiElement: NonDeleted<ExcalidrawLinearElement> | null;
             selectionElement: import("./types").NonDeletedExcalidrawElement | null;
             isBindingEnabled: boolean;
@@ -241,6 +241,7 @@ export declare class LinearElementEditor {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
     };
     static deletePoints(element: NonDeleted<ExcalidrawLinearElement>, pointIndices: readonly number[]): void;

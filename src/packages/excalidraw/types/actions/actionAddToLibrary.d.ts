@@ -122,6 +122,7 @@ export declare const actionAddToLibrary: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
     } | {
         commitToHistory: false;
@@ -244,6 +245,7 @@ export declare const actionAddToLibrary: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
     }> | {
         commitToHistory: false;
@@ -366,6 +368,7 @@ export declare const actionAddToLibrary: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
     };
     contextItemLabel: string;

@@ -142,6 +142,7 @@ export declare const actionSetEmbeddableAsActiveTool: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: false;
     };

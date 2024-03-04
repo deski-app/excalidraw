@@ -128,6 +128,7 @@ export declare const actionDeleteSelected: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: false;
     } | {
@@ -279,6 +280,7 @@ export declare const actionDeleteSelected: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: true;
     } | {
@@ -395,6 +397,7 @@ export declare const actionDeleteSelected: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
         };
         commitToHistory: boolean;
     };

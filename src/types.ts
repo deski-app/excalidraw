@@ -296,7 +296,7 @@ export type AppState = {
     y: number;
   } | null;
   objectsSnapModeEnabled: boolean;
-  disableTextEditing: boolean;
+  disableCanvasDoubleClick: boolean;
 };
 
 export type UIAppState = Omit<

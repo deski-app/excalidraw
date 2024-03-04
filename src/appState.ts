@@ -105,7 +105,7 @@ export const getDefaultAppState = (): Omit<
       y: 0,
     },
     objectsSnapModeEnabled: false,
-    disableTextEditing: false,
+    disableCanvasDoubleClick: false,
   };
 };
 
@@ -216,7 +216,7 @@ const APP_STATE_STORAGE_CONF = (<
   snapLines: { browser: false, export: false, server: false },
   originSnapOffset: { browser: false, export: false, server: false },
   objectsSnapModeEnabled: { browser: true, export: false, server: false },
-  disableTextEditing: { browser: false, export: false, server: false },
+  disableCanvasDoubleClick: { browser: false, export: false, server: false },
 });
 
 const _clearAppStateForStorage = <

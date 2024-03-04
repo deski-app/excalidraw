@@ -2293,6 +2293,16 @@ class App extends React.Component<AppProps, AppState> {
         return;
       }
 
+      const maybeElements = data.elements?.map((element) =>
+        this.state.externalToParkalotElement(element),
+      );
+
+      if (maybeElements?.some((elements) => elements === undefined)) {
+        return;
+      }
+
+      data.elements = maybeElements as ExcalidrawElement[] | undefined;
+
       if (this.props.onPaste) {
         try {
           if ((await this.props.onPaste(data, event)) === false) {
@@ -2360,7 +2370,19 @@ class App extends React.Component<AppProps, AppState> {
     retainSeed?: boolean;
     fitToContent?: boolean;
   }) => {
-    const elements = restoreElements(opts.elements, null, undefined);
+    const maybeElements = opts.elements.map(
+      this.state.externalToParkalotElement,
+    );
+
+    if (maybeElements.some((elements) => elements === undefined)) {
+      return;
+    }
+
+    const elements = restoreElements(
+      maybeElements as ExcalidrawElement[],
+      null,
+      undefined,
+    );
     const [minX, minY, maxX, maxY] = getCommonBounds(elements);
 
     const elementsCenterX = distance(minX, maxX) / 2;
@@ -6261,6 +6283,14 @@ class App extends React.Component<AppProps, AppState> {
             // Move the currently selected elements to the top of the z index stack, and
             // put the duplicates where the selected elements used to be.
             // (the origin point where the dragging started)
+
+            const maybeElements = pointerDownState.hit.allHitElements.map(
+              this.state.externalToParkalotElement,
+            );
+
+            if (maybeElements.some((element) => element === undefined)) {
+              return;
+            }
 
             pointerDownState.hit.hasBeenDuplicated = true;
 

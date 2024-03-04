@@ -7,9 +7,12 @@ import {
   EXPORT_SCALES,
   THEME,
 } from "./constants";
+import { ExcalidrawElement } from "./element/types";
 import { t } from "./i18n";
 import { AppState, NormalizedZoomValue } from "./types";
 import { getDateTime } from "./utils";
+
+const externalToParkalotElement = (element: ExcalidrawElement) => element;
 
 const defaultExportScale = EXPORT_SCALES.includes(devicePixelRatio)
   ? devicePixelRatio
@@ -106,6 +109,7 @@ export const getDefaultAppState = (): Omit<
     },
     objectsSnapModeEnabled: false,
     disableCanvasDoubleClick: false,
+    externalToParkalotElement,
   };
 };
 
@@ -217,6 +221,7 @@ const APP_STATE_STORAGE_CONF = (<
   originSnapOffset: { browser: false, export: false, server: false },
   objectsSnapModeEnabled: { browser: true, export: false, server: false },
   disableCanvasDoubleClick: { browser: false, export: false, server: false },
+  externalToParkalotElement: { browser: false, export: false, server: false },
 });
 
 const _clearAppStateForStorage = <

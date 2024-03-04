@@ -1,3 +1,4 @@
+/* eslint-disable no-unreachable */
 import { AppState, ExcalidrawProps, Point, UIAppState } from "../types";
 import {
   getShortcutKey,

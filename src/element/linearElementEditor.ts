@@ -130,6 +130,10 @@ export class LinearElementEditor {
     return null;
   }
 
+  static isEditable(element: NonDeleted<ExcalidrawLinearElement>): boolean {
+    return Boolean(element?.customData?.nonLinearElement);
+  }
+
   static handleBoxSelection(
     event: PointerEvent,
     appState: AppState,
@@ -901,6 +905,9 @@ export class LinearElementEditor {
     x: number,
     y: number,
   ) {
+    if (!LinearElementEditor.isEditable(element)) {
+      return -1;
+    }
     const pointHandles =
       LinearElementEditor.getPointsGlobalCoordinates(element);
     let idx = pointHandles.length;

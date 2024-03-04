@@ -131,11 +131,7 @@ export class LinearElementEditor {
   }
 
   static isEditable(element: NonDeleted<ExcalidrawLinearElement>): boolean {
-    return (
-      element?.customData &&
-      "nonLinearElement" in element.customData &&
-      element.customData.nonLinearElement
-    );
+    return Boolean(element?.customData?.nonLinearElement);
   }
 
   static handleBoxSelection(

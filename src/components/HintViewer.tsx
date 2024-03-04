@@ -6,7 +6,7 @@ import {
   isTextBindableContainer,
   isTextElement,
 } from "../element/typeChecks";
-import { getShortcutKey } from "../utils";
+import { PARKALOT_LOCK_STATE, getShortcutKey } from "../utils";
 import { isEraserActive } from "../appState";
 
 import "./HintViewer.scss";
@@ -24,6 +24,11 @@ const getHints = ({ appState, isMobile, device, app }: HintViewerProps) => {
 
   if (appState.openSidebar && !device.editor.canFitSidebar) {
     return null;
+  }
+
+  // Parkalot: Every tool should have this description
+  if (PARKALOT_LOCK_STATE) {
+    return t("hints.canvasPanning");
   }
 
   if (isEraserActive(appState)) {

@@ -2,6 +2,7 @@ import cssVariables from "./css/variables.module.scss";
 import { AppProps } from "./types";
 import { ExcalidrawElement, FontFamilyValues } from "./element/types";
 import { COLOR_PALETTE } from "./colors";
+import { PARKALOT_LOCK_STATE } from "./utils";
 
 export const isDarwin = /Mac|iPod|iPhone|iPad/.test(navigator.platform);
 export const isWindows = /^Win/.test(navigator.platform);
@@ -334,7 +335,7 @@ export const DEFAULT_ELEMENT_PROPS: {
   strokeStyle: "solid",
   roughness: ROUGHNESS.artist,
   opacity: 100,
-  locked: false,
+  locked: PARKALOT_LOCK_STATE,
 };
 
 export const LIBRARY_SIDEBAR_TAB = "library";

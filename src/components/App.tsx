@@ -3799,6 +3799,9 @@ class App extends React.Component<AppProps, AppState> {
   private handleCanvasDoubleClick = (
     event: React.MouseEvent<HTMLCanvasElement>,
   ) => {
+    if (this.state.disableCanvasDoubleClick) {
+      return;
+    }
     // case: double-clicking with arrow/line tool selected would both create
     // text and enter multiElement mode
     if (this.state.multiElement) {

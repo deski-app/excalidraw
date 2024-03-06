@@ -5,7 +5,7 @@ export declare const actionDuplicateSelection: {
     trackEvent: {
         category: "element";
     };
-    perform: (elements: readonly ExcalidrawElement[], appState: Readonly<AppState>) => false | {
+    perform: (_elements: readonly ExcalidrawElement[], appState: Readonly<AppState>) => false | {
         commitToHistory: true;
         elements?: readonly ExcalidrawElement[] | null | undefined;
         appState?: import("../utility-types").MarkOptional<AppState, "width" | "height" | "offsetTop" | "offsetLeft"> | null | undefined;

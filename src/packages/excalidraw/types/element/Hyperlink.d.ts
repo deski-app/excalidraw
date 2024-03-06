@@ -136,6 +136,8 @@ export declare const actionLink: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: import("./types").ExcalidrawElement) => import("./types").ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };

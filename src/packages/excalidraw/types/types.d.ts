@@ -17,6 +17,7 @@ import type { IMAGE_MIME_TYPES, MIME_TYPES } from "./constants";
 import { ContextMenuItems } from "./components/ContextMenu";
 import { SnapLine } from "./snapping";
 import { Merge, ValueOf } from "./utility-types";
+import { Shape, ShapeValueDefault } from "./shapes";
 export type Point = Readonly<RoughPoint>;
 export type Collaborator = {
     pointer?: CollaboratorPointer;
@@ -241,6 +242,8 @@ export type AppState = {
         y: number;
     } | null;
     objectsSnapModeEnabled: boolean;
+    disableCanvasDoubleClick: boolean;
+    externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
 };
 export type UIAppState = Omit<AppState, "suggestedBindings" | "startBoundElement" | "cursorButton" | "scrollX" | "scrollY">;
 export type NormalizedZoomValue = number & {
@@ -354,9 +357,9 @@ export type CanvasActions = Partial<{
 export type UIOptions = Partial<{
     dockedSidebarBreakpoint: number;
     canvasActions: CanvasActions;
-    tools: {
-        image: boolean;
-    };
+    tools: Partial<Record<ShapeValueDefault, boolean>>;
+    extraToolsMenu: boolean;
+    customTools: Shape[];
     /** @deprecated does nothing. Will be removed in 0.15 */
     welcomeScreen?: boolean;
 }>;

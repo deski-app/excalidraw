@@ -124,6 +124,8 @@ export declare const actionCopy: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
         };
     } | {
         commitToHistory: false;
@@ -260,6 +262,8 @@ export declare const actionPaste: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
         };
     } | {
         commitToHistory: false;
@@ -396,6 +400,8 @@ export declare const actionCut: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
         };
         commitToHistory: false;
     } | {
@@ -547,6 +553,8 @@ export declare const actionCut: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     } | {
@@ -663,6 +671,8 @@ export declare const actionCut: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
         };
         commitToHistory: boolean;
     };
@@ -799,6 +809,8 @@ export declare const actionCopyAsSvg: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
         };
         commitToHistory: false;
     }>;
@@ -935,6 +947,8 @@ export declare const actionCopyAsPng: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
         };
         commitToHistory: false;
     }>;

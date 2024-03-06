@@ -146,7 +146,8 @@ export const SelectedShapeActions = ({
 
       {renderAction("changeOpacity")}
 
-      <fieldset>
+      {/* Parkalot: We have specific layers */}
+      {/* <fieldset>
         <legend>{t("labels.layers")}</legend>
         <div className="buttonList">
           {renderAction("sendToBack")}
@@ -154,7 +155,7 @@ export const SelectedShapeActions = ({
           {renderAction("bringToFront")}
           {renderAction("bringForward")}
         </div>
-      </fieldset>
+      </fieldset> */}
 
       {targetElements.length > 1 && !isSingleElementBoundContainer && (
         <fieldset>

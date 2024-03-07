@@ -127,6 +127,7 @@ export declare const actionSelectAll: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: true;
     };

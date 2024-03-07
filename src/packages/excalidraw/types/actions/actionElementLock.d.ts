@@ -128,6 +128,7 @@ export declare const actionToggleElementLock: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: true;
     };
@@ -266,6 +267,7 @@ export declare const actionUnlockAllElements: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: true;
     };

@@ -125,6 +125,7 @@ export declare const actionChangeProjectName: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     };
@@ -260,6 +261,7 @@ export declare const actionChangeExportScale: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     };
@@ -395,6 +397,7 @@ export declare const actionChangeExportBackground: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     };
@@ -530,6 +533,7 @@ export declare const actionChangeExportEmbedScene: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     };
@@ -664,6 +668,7 @@ export declare const actionSaveToActiveFile: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
     } | {
         commitToHistory: false;
@@ -800,6 +805,7 @@ export declare const actionSaveFileToDisk: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
     } | {
         commitToHistory: false;
@@ -935,6 +941,7 @@ export declare const actionLoadScene: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         files: import("../types").BinaryFiles;
         commitToHistory: true;
@@ -1061,6 +1068,7 @@ export declare const actionLoadScene: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         files: import("../types").BinaryFiles;
         commitToHistory: false;
@@ -1197,6 +1205,7 @@ export declare const actionExportWithDarkMode: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     };

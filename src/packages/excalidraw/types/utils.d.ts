@@ -79,6 +79,7 @@ export declare const chunk: <T extends unknown>(array: readonly T[], size: numbe
 export declare const selectNode: (node: Element) => void;
 export declare const removeSelection: () => void;
 export declare const distance: (x: number, y: number) => number;
+export declare const PARKALOT_LOCK_STATE = true;
 export declare const updateActiveTool: (appState: Pick<AppState, "activeTool">, data: (({
     type: ToolType;
 } | {

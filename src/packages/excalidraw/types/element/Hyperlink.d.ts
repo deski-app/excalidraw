@@ -138,6 +138,7 @@ export declare const actionLink: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: import("./types").ExcalidrawElement) => import("./types").ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: true;
     };

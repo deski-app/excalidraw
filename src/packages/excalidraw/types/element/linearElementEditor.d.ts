@@ -243,6 +243,7 @@ export declare class LinearElementEditor {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
     };
     static deletePoints(element: NonDeleted<ExcalidrawLinearElement>, pointIndices: readonly number[]): void;

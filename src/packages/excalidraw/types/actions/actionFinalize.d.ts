@@ -126,6 +126,7 @@ export declare const actionFinalize: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: true;
     } | {
@@ -248,6 +249,7 @@ export declare const actionFinalize: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: boolean;
     };

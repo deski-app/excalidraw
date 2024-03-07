@@ -146,6 +146,7 @@ export declare const actionBindText: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: true;
     };
@@ -282,6 +283,7 @@ export declare const actionWrapTextInContainer: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: true;
     };

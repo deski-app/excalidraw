@@ -126,6 +126,7 @@ export declare const actionToggleStats: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         commitToHistory: false;
     };

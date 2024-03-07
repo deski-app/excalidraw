@@ -131,6 +131,7 @@ export declare const actionGroup: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         elements: ExcalidrawElement[];
         commitToHistory: true;
@@ -273,6 +274,7 @@ export declare const actionUngroup: {
             objectsSnapModeEnabled: boolean;
             disableCanvasDoubleClick: boolean;
             externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
+            disableTextEditing: boolean;
         };
         elements: ExcalidrawElement[];
         commitToHistory: true;

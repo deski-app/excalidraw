@@ -6,5 +6,5 @@ type LockIconProps = {
     onChange?(): void;
     isMobile?: boolean;
 };
-export declare const LockButton: (props: LockIconProps) => JSX.Element;
+export declare const LockButton: (props: LockIconProps) => JSX.Element | null;
 export {};

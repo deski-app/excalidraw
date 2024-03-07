@@ -244,6 +244,7 @@ export type AppState = {
     objectsSnapModeEnabled: boolean;
     disableCanvasDoubleClick: boolean;
     externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
+    disableTextEditing: boolean;
 };
 export type UIAppState = Omit<AppState, "suggestedBindings" | "startBoundElement" | "cursorButton" | "scrollX" | "scrollY">;
 export type NormalizedZoomValue = number & {

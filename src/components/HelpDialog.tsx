@@ -107,12 +107,16 @@ const ShortcutKey = (props: { children: React.ReactNode }) => (
 );
 
 export const HelpDialog = ({ onClose }: { onClose?: () => void }) => {
+  return null;
+
+  // eslint-disable-next-line no-unreachable
   const handleClose = React.useCallback(() => {
     if (onClose) {
       onClose();
     }
   }, [onClose]);
 
+  // eslint-disable-next-line no-unreachable
   return (
     <>
       <Dialog

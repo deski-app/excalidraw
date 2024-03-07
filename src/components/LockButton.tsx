@@ -3,6 +3,7 @@ import "./ToolIcon.scss";
 import clsx from "clsx";
 import { ToolButtonSize } from "./ToolButton";
 import { LockedIcon, UnlockedIcon } from "./icons";
+import { PARKALOT_LOCK_STATE } from "../utils";
 
 type LockIconProps = {
   title?: string;
@@ -20,6 +21,10 @@ const ICONS = {
 };
 
 export const LockButton = (props: LockIconProps) => {
+  if (PARKALOT_LOCK_STATE) {
+    return null;
+  }
+
   return (
     <label
       className={clsx(

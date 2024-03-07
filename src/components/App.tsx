@@ -254,6 +254,7 @@ import {
   muteFSAbortError,
   isTestEnv,
   easeOut,
+  PARKALOT_LOCK_STATE,
 } from "../utils";
 import {
   embeddableURLValidator,
@@ -2718,7 +2719,7 @@ class App extends React.Component<AppProps, AppState> {
               ? { type: "selection" }
               : prevState.activeTool,
           ),
-          locked: !prevState.activeTool.locked,
+          locked: PARKALOT_LOCK_STATE,
         },
       };
     });

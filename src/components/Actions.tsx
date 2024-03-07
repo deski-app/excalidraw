@@ -231,10 +231,20 @@ export const ShapesSwitcher = ({
   const laserToolSelected = activeTool.type === "laser";
   const embeddableToolSelected = activeTool.type === "embeddable";
 
+  const uniqueShapes = new Map<string, Shape>();
+
+  SHAPES.forEach((shape) => {
+    uniqueShapes.set(shape.value, shape);
+  });
+
+  UIOptions.customTools?.forEach((customTool) => {
+    uniqueShapes.set(customTool.customType || customTool.value, customTool);
+  });
+
   return (
     <>
-      {(SHAPES as Shape[])
-        .concat(UIOptions.customTools || [])
+      {Array.from(uniqueShapes)
+        .map(([_, shape]) => shape)
         .sort((a, b) => (+a.numericKey || 10) - (+b.numericKey || 10))
         .map(
           ({ value, icon, key, numericKey, fillable, customType }, index) => {

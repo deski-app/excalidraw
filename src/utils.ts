@@ -361,6 +361,8 @@ export const removeSelection = () => {
 
 export const distance = (x: number, y: number) => Math.abs(x - y);
 
+export const PARKALOT_LOCK_STATE = true;
+
 export const updateActiveTool = (
   appState: Pick<AppState, "activeTool">,
   data: ((
@@ -377,7 +379,7 @@ export const updateActiveTool = (
       ...appState.activeTool,
       type: "custom",
       customType: data.customType,
-      locked: data.locked ?? appState.activeTool.locked,
+      locked: PARKALOT_LOCK_STATE,
     };
   }
 
@@ -389,7 +391,7 @@ export const updateActiveTool = (
         : data.lastActiveToolBeforeEraser,
     type: data.type,
     customType: null,
-    locked: data.locked ?? appState.activeTool.locked,
+    locked: PARKALOT_LOCK_STATE,
   };
 };
 

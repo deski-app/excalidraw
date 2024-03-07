@@ -144,6 +144,8 @@ export declare const actionBindText: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };
@@ -278,6 +280,8 @@ export declare const actionWrapTextInContainer: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };

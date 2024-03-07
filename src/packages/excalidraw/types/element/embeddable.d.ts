@@ -142,6 +142,8 @@ export declare const actionSetEmbeddableAsActiveTool: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: false;
     };

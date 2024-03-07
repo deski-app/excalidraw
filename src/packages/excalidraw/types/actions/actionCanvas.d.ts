@@ -136,6 +136,8 @@ export declare const actionClearCanvas: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };
@@ -268,6 +270,8 @@ export declare const actionZoomIn: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: false;
     };
@@ -402,6 +406,8 @@ export declare const actionZoomOut: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: false;
     };
@@ -536,6 +542,8 @@ export declare const actionResetZoom: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: false;
     };
@@ -671,6 +679,8 @@ export declare const zoomToFit: ({ targetElements, appState, fitToViewport, view
             y: number;
         } | null;
         objectsSnapModeEnabled: boolean;
+        disableCanvasDoubleClick: boolean;
+        externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
     };
     commitToHistory: boolean;
 };
@@ -799,6 +809,8 @@ export declare const actionZoomToFitSelectionInViewport: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: boolean;
     };
@@ -931,6 +943,8 @@ export declare const actionZoomToFitSelection: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: boolean;
     };
@@ -1064,6 +1078,8 @@ export declare const actionZoomToFit: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: boolean;
     };
@@ -1197,6 +1213,8 @@ export declare const actionToggleTheme: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: false;
     };
@@ -1323,6 +1341,8 @@ export declare const actionToggleEraserTool: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };
@@ -1448,6 +1468,8 @@ export declare const actionToggleHandTool: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };

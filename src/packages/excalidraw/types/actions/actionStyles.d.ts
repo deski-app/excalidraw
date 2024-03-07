@@ -122,6 +122,8 @@ export declare const actionCopyStyles: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: import("../element/types").ExcalidrawElement) => import("../element/types").ExcalidrawElement | undefined;
         };
         commitToHistory: false;
     };

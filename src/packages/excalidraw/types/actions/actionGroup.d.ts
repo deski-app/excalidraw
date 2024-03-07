@@ -129,6 +129,8 @@ export declare const actionGroup: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         elements: ExcalidrawElement[];
         commitToHistory: true;
@@ -269,6 +271,8 @@ export declare const actionUngroup: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         elements: ExcalidrawElement[];
         commitToHistory: true;

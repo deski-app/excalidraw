@@ -126,6 +126,8 @@ export declare const actionToggleElementLock: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };
@@ -262,6 +264,8 @@ export declare const actionUnlockAllElements: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };

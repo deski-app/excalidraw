@@ -142,6 +142,8 @@ export declare const actionChangeFillStyle: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };
@@ -273,6 +275,8 @@ export declare const actionChangeStrokeWidth: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };
@@ -404,6 +408,8 @@ export declare const actionChangeSloppiness: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };
@@ -535,6 +541,8 @@ export declare const actionChangeStrokeStyle: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };
@@ -666,6 +674,8 @@ export declare const actionChangeOpacity: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };
@@ -797,6 +807,8 @@ export declare const actionChangeFontSize: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: boolean;
     };
@@ -928,6 +940,8 @@ export declare const actionDecreaseFontSize: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: boolean;
     };
@@ -1059,6 +1073,8 @@ export declare const actionIncreaseFontSize: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: boolean;
     };
@@ -1190,6 +1206,8 @@ export declare const actionChangeFontFamily: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };
@@ -1321,6 +1339,8 @@ export declare const actionChangeTextAlign: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };
@@ -1454,6 +1474,8 @@ export declare const actionChangeVerticalAlign: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };
@@ -1585,6 +1607,8 @@ export declare const actionChangeRoundness: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };
@@ -1719,6 +1743,8 @@ export declare const actionChangeArrowhead: {
                 y: number;
             } | null;
             objectsSnapModeEnabled: boolean;
+            disableCanvasDoubleClick: boolean;
+            externalToParkalotElement: (element: ExcalidrawElement) => ExcalidrawElement | undefined;
         };
         commitToHistory: true;
     };

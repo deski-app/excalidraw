@@ -298,6 +298,9 @@ export type AppState = {
   } | null;
   objectsSnapModeEnabled: boolean;
   disableCanvasDoubleClick: boolean;
+  externalToParkalotElement: (
+    element: ExcalidrawElement,
+  ) => ExcalidrawElement | undefined;
 };
 
 export type UIAppState = Omit<

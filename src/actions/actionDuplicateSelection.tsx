@@ -87,7 +87,7 @@ const duplicateElements = (
   const oldIdToDuplicatedId = new Map();
 
   const duplicateAndOffsetElement = (element: ExcalidrawElement) => {
-    const newElement = duplicateElement(
+    const _newElement = duplicateElement(
       appState.editingGroupId,
       groupIdMap,
       element,
@@ -96,6 +96,7 @@ const duplicateElements = (
         y: element.y + GRID_SIZE / 2,
       },
     );
+    const newElement = appState.externalToParkalotElement(_newElement)!;
     oldIdToDuplicatedId.set(element.id, newElement.id);
     oldElements.push(element);
     newElements.push(newElement);
@@ -108,6 +109,17 @@ const duplicateElements = (
       includeElementsInFrames: true,
     }),
   );
+
+  let areValidElemets = true;
+  idsOfElementsToDuplicate.forEach((element) => {
+    if (!appState.externalToParkalotElement(element)) {
+      areValidElemets = false;
+    }
+  });
+
+  if (!areValidElemets) {
+    return { elements, appState };
+  }
 
   // Ids of elements that have already been processed so we don't push them
   // into the array twice if we end up backtracking when retrieving

@@ -110,6 +110,7 @@ export const getDefaultAppState = (): Omit<
     objectsSnapModeEnabled: false,
     disableCanvasDoubleClick: false,
     externalToParkalotElement,
+    disableTextEditing: false,
   };
 };
 
@@ -222,6 +223,7 @@ const APP_STATE_STORAGE_CONF = (<
   objectsSnapModeEnabled: { browser: true, export: false, server: false },
   disableCanvasDoubleClick: { browser: false, export: false, server: false },
   externalToParkalotElement: { browser: false, export: false, server: false },
+  disableTextEditing: { browser: false, export: false, server: false },
 });
 
 const _clearAppStateForStorage = <

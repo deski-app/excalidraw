@@ -301,6 +301,7 @@ export type AppState = {
   externalToParkalotElement: (
     element: ExcalidrawElement,
   ) => ExcalidrawElement | undefined;
+  disableTextEditing: boolean;
 };
 
 export type UIAppState = Omit<

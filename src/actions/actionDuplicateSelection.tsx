@@ -87,7 +87,7 @@ const duplicateElements = (
   const oldIdToDuplicatedId = new Map();
 
   const duplicateAndOffsetElement = (element: ExcalidrawElement) => {
-    const newElement = duplicateElement(
+    const _newElement = duplicateElement(
       appState.editingGroupId,
       groupIdMap,
       element,
@@ -96,6 +96,7 @@ const duplicateElements = (
         y: element.y + GRID_SIZE / 2,
       },
     );
+    const newElement = appState.externalToParkalotElement(_newElement)!;
     oldIdToDuplicatedId.set(element.id, newElement.id);
     oldElements.push(element);
     newElements.push(newElement);

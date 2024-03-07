@@ -988,6 +988,10 @@ export class LinearElementEditor {
       return false;
     }
 
+    if (!appState.externalToParkalotElement(element)) {
+      return false;
+    }
+
     const { points } = element;
 
     const nextSelectedIndices: number[] = [];

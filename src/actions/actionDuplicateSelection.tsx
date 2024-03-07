@@ -35,15 +35,7 @@ import {
 export const actionDuplicateSelection = register({
   name: "duplicateSelection",
   trackEvent: { category: "element" },
-  perform: (_elements, appState) => {
-    const maybeElements = _elements.map(appState.externalToParkalotElement);
-
-    if (maybeElements.some((elements) => typeof elements === "undefined")) {
-      return false;
-    }
-
-    const elements = maybeElements as ExcalidrawElement[];
-
+  perform: (elements, appState) => {
     // duplicate selected point(s) if editing a line
     if (appState.editingLinearElement) {
       const ret = LinearElementEditor.duplicateSelectedPoints(appState);
@@ -116,6 +108,17 @@ const duplicateElements = (
       includeElementsInFrames: true,
     }),
   );
+
+  let areValidElemets = true;
+  idsOfElementsToDuplicate.forEach((element) => {
+    if (!appState.externalToParkalotElement(element)) {
+      areValidElemets = false;
+    }
+  });
+
+  if (!areValidElemets) {
+    return { elements, appState };
+  }
 
   // Ids of elements that have already been processed so we don't push them
   // into the array twice if we end up backtracking when retrieving

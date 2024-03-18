@@ -4769,11 +4769,15 @@ class App extends React.Component<AppProps, AppState> {
       return;
     } else if (
       this.state.activeTool.type === "arrow" ||
-      this.state.activeTool.type === "line"
+      this.state.activeTool.type === "line" ||
+      (this.state.activeTool.type === "custom" &&
+        this.state.activeTool.customType.startsWith("customLine_"))
     ) {
       this.handleLinearElementOnPointerDown(
         event,
-        this.state.activeTool.type,
+        this.state.activeTool.type === "custom"
+          ? "line"
+          : this.state.activeTool.type,
         pointerDownState,
       );
     } else if (this.state.activeTool.type === "image") {
@@ -6065,7 +6069,9 @@ class App extends React.Component<AppProps, AppState> {
       if (
         !pointerDownState.drag.hasOccurred &&
         (this.state.activeTool.type === "arrow" ||
-          this.state.activeTool.type === "line")
+          this.state.activeTool.type === "line" ||
+          (this.state.activeTool.type === "custom" &&
+            this.state.activeTool.customType.startsWith("customLine_")))
       ) {
         if (
           distance2d(
@@ -8423,7 +8429,6 @@ class App extends React.Component<AppProps, AppState> {
   private getContextMenuItems = (
     type: "canvas" | "element",
   ): ContextMenuItems => {
-    console.log("dupa");
     const items = this._getContextMenuItems(type);
     return items
       .filter((item) => this.parkalotSupportedContextMenu.has(item))

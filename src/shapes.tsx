@@ -37,6 +37,7 @@ type ShapeBase = {
   numericKey: ShapeKey;
   fillable: boolean;
   customType: string | null;
+  customHintText?: string;
 };
 
 type ShapeCustom = ShapeBase & { value: "custom" };

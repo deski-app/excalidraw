@@ -26,9 +26,9 @@ const getHints = ({ appState, isMobile, device, app }: HintViewerProps) => {
     return null;
   }
 
-  // Parkalot: Every tool should have this description
+  // Parkalot: Custom tool description
   if (PARKALOT_LOCK_STATE) {
-    return t("hints.canvasPanning");
+    return activeTool.customHintText ?? t("hints.canvasPanning");
   }
 
   if (isEraserActive(appState)) {

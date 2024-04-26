@@ -247,7 +247,18 @@ export const ShapesSwitcher = ({
         .map(([_, shape]) => shape)
         .sort((a, b) => (+a.numericKey || 10) - (+b.numericKey || 10))
         .map(
-          ({ value, icon, key, numericKey, fillable, customType }, index) => {
+          (
+            {
+              value,
+              icon,
+              key,
+              numericKey,
+              fillable,
+              customType,
+              customHintText,
+            },
+            index,
+          ) => {
             if (
               UIOptions.tools?.[
                 value as Extract<
@@ -295,12 +306,17 @@ export const ShapesSwitcher = ({
                       app.setActiveTool({
                         type: value,
                         insertOnCanvasDirectly: pointerType !== "mouse",
+                        customHintText,
                       });
                     } else {
-                      app.setActiveTool({ type: value });
+                      app.setActiveTool({ type: value, customHintText });
                     }
                   } else if (customType) {
-                    app.setActiveTool({ type: "custom", customType });
+                    app.setActiveTool({
+                      type: "custom",
+                      customType,
+                      customHintText,
+                    });
                   }
                 }}
               />

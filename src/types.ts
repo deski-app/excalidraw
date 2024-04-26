@@ -105,7 +105,7 @@ export type ToolType =
   | "embeddable"
   | "laser";
 
-export type ActiveTool =
+export type ActiveTool = (
   | {
       type: ToolType;
       customType: null;
@@ -113,7 +113,10 @@ export type ActiveTool =
   | {
       type: "custom";
       customType: string;
-    };
+    }
+) & {
+  customHintText?: string;
+};
 
 export type SidebarName = string;
 export type SidebarTabName = string;

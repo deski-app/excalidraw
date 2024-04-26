@@ -87,6 +87,7 @@ export declare const updateActiveTool: (appState: Pick<AppState, "activeTool">, 
     customType: string;
 }) & {
     locked?: boolean;
+    customHintText?: string;
 }) & {
     lastActiveToolBeforeEraser?: ActiveTool | null;
 }) => AppState["activeTool"];

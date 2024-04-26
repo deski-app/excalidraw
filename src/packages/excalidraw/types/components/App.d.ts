@@ -340,6 +340,7 @@ declare class App extends React.Component<AppProps, AppState> {
         customType: string;
     }) & {
         locked?: boolean;
+        customHintText?: string;
     }) => void;
     setOpenDialog: (dialogType: AppState["openDialog"]) => void;
     private setCursor;

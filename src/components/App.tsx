@@ -3338,7 +3338,7 @@ class App extends React.Component<AppProps, AppState> {
             }
         )
       | { type: "custom"; customType: string }
-    ) & { locked?: boolean },
+    ) & { locked?: boolean; customHintText?: string },
   ) => {
     if (!this.isToolSupported(tool.type)) {
       console.warn(

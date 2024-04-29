@@ -370,7 +370,7 @@ export const updateActiveTool = (
         type: ToolType;
       }
     | { type: "custom"; customType: string }
-  ) & { locked?: boolean }) & {
+  ) & { locked?: boolean; customHintText?: string }) & {
     lastActiveToolBeforeEraser?: ActiveTool | null;
   },
 ): AppState["activeTool"] => {
@@ -380,6 +380,7 @@ export const updateActiveTool = (
       type: "custom",
       customType: data.customType,
       locked: PARKALOT_LOCK_STATE,
+      customHintText: data.customHintText,
     };
   }
 
@@ -392,6 +393,7 @@ export const updateActiveTool = (
     type: data.type,
     customType: null,
     locked: PARKALOT_LOCK_STATE,
+    customHintText: data.customHintText,
   };
 };
 

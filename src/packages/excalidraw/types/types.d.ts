@@ -60,12 +60,14 @@ export type BinaryFileData = {
 export type BinaryFileMetadata = Omit<BinaryFileData, "dataURL">;
 export type BinaryFiles = Record<ExcalidrawElement["id"], BinaryFileData>;
 export type ToolType = "selection" | "rectangle" | "diamond" | "ellipse" | "arrow" | "line" | "freedraw" | "text" | "image" | "eraser" | "hand" | "frame" | "embeddable" | "laser";
-export type ActiveTool = {
+export type ActiveTool = ({
     type: ToolType;
     customType: null;
 } | {
     type: "custom";
     customType: string;
+}) & {
+    customHintText?: string;
 };
 export type SidebarName = string;
 export type SidebarTabName = string;

@@ -20,6 +20,10 @@ type ShapeBase = {
     numericKey: ShapeKey;
     fillable: boolean;
     customType: string | null;
+    /**
+     * `Parkalot` - Custom hint text for the shape
+     */
+    customHintText?: string;
 };
 type ShapeCustom = ShapeBase & {
     value: "custom";
